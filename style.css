@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Karla", sans-serif; 
+    background-color: hsl(204, 43%, 93%);
+}
+
+main {
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 32px; 
+    max-width: 350px; 
+}
+
+.grid {
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.join .subheading {
+    color:hsl(71, 73%, 54%); 
+    margin: 16px 0; 
+}
+
+.join p {
+    color: hsl(218, 22%, 67%); 
+}
+
+.card {
+    padding: 24px; 
+}
+
+.dollar {
+    font-size: 32px; 
+    display: flex; 
+    align-items: center;
+    gap: 5px; 
+    font-weight: 700; 
+    margin-bottom: 10px; 
+}
+
+.dollar span {
+    font-size: 16px; 
+    font-weight: 400; 
+    opacity: .7; 
+}
+
+.card:nth-of-type(1) {
+    background-color: white;
+    grid-area: join; 
+}
+.card:nth-of-type(2) {
+    background-color: hsl(179, 62%, 43%); 
+    grid-area: price;
+}
+.card:nth-of-type(3) {
+    background-color: hsl(179, 48%, 52%); 
+    grid-area: why; 
+}
+
+.white-txt {
+    color: white; 
+}
+
+h1 {
+    font-size: 20px; 
+    color: hsl(179, 62%, 43%); 
+}
+
+h2 {
+    font-size: 18px; 
+    margin-bottom: 16px; 
+}
+
+ul {
+    list-style: none;
+    font-size: 14px; 
+}
+
+li {
+    color: hsla(204, 43%, 93%, .7); 
+    line-height: 1.45; 
+}
+
+button {
+    border: none; 
+    width: 100%; 
+    padding: 16px; 
+    font-size: 16px; 
+    font-weight: 700;
+    background: hsl(71, 73%, 54%); 
+    margin-top: 24px; 
+    cursor: pointer; 
+    color: white; 
+    border-radius: 5px; 
+    box-shadow: 0px 10px hsla(179, 62%, 23%, .1)
+}
+
+@media screen and (min-width: 700px) {
+    .grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        max-width: 635px; 
+        grid-template-areas: 
+        "join join"
+        "price why";
+    }
+    .card {
+        padding: 40px; 
+    }
+    h1 {
+        font-size: 24px; 
+    }
+    .subheading {
+        font-size: 18px; 
+    }
+}
